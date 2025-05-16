@@ -4,12 +4,13 @@ import React from 'react';
 import {createStyles} from './onboarding.styles';
 import assets from '../../assets';
 import Button from '../../../components/button/component';
+import {navigate} from '../../navigators/navigation-utilities';
 
 const OnBoardingScreen = () => {
   const styles = createStyles();
-  const {carBg, logo, overlayBg} = assets;
+  const {carBg, logo, overlayBg, mazda} = assets;
   return (
-    <ImageBackground source={carBg} style={styles.container} resizeMode="cover">
+    <ImageBackground source={mazda} style={styles.container} resizeMode="cover">
       <ImageBackground
         source={overlayBg}
         style={styles.overlay}
@@ -24,7 +25,12 @@ const OnBoardingScreen = () => {
             <Text style={styles.title}>Car IO</Text>
           </View>
         </View>
-        <Button text="Get Started" buttonStyles={styles.buttonStyle} />
+        <Button
+          text="Get Started"
+          onPress={() => navigate('OnBoardingScreenTwo')}
+          buttonStyles={styles.buttonStyle}
+          textStyles={styles.buttonText}
+        />
       </ImageBackground>
     </ImageBackground>
   );

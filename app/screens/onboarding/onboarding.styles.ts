@@ -33,11 +33,29 @@ title:{
     fontWeight:'bold'
     
 },
+title2:{
+    fontSize:FontSize.FONT_30Px,
+},
 textContainer:{
 
 },
 buttonStyle:{
     marginBottom:scale(32)
-}
+},
+buttonText:{
+    fontWeight:'500',
+
+},
+infoText:{
+    fontSize:FontSize.FONT_13Px,
+    color:colors.white,
+
+},
+infoTextContainer:{
+    marginBottom:scale(42),
+
+
+},
+
 
 })
