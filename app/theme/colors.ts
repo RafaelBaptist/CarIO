@@ -11,5 +11,9 @@ export const colors = {
   icon: 'rgb(156,156,156)',
   search: 'rgb(51,52,56)',
   button: '#21292b',
-  background:'#f8f8f8'
+  background:'#f8f8f8',
+  border:'#dee2e6',
+  placeholder:'#7f7f7f',
+  checkBoxBg:'#454545',
+  textForgot:'#454545'
 };

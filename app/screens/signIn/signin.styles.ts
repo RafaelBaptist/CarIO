@@ -7,7 +7,7 @@ export const createStyles= ()=>StyleSheet.create({
 container:{
     flex:1,
     backgroundColor:colors.background,
-    paddingHorizontal:scale(12),
+    paddingHorizontal:scale(18),
 },
 carLogo:{
 
@@ -37,5 +37,23 @@ textStyle:{
     color:colors.black,
     fontWeight:'800'
   
-}
+},
+textRemember:{
+    fontSize:FontSize.FONT_12Px,
+    color:colors.placeholder,
+    fontWeight:'500',
+},
+colG2:{
+    columnGap:scale(2),
+    justifyContent:'space-between',
+    flexDirection:'row',
+    alignItems:'center',
+    
+},
+forgotContainer:{
+    flexDirection:'row',
+    alignItems:'center',
+    justifyContent:'space-between',
+
+},
 })
