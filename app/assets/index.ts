@@ -3,7 +3,8 @@ const assets = {
   overlayBg: require('./images/overlay-bg.png'),
   logo: require('./images/carro.jpg'),
   mazda:require('./images/mazdaa.jpg'),
-  carTwo:require('./images/cartwo.jpg')
+  carTwo:require('./images/cartwo.jpg'),
+  logoBlack:require('./images/logoblack.png')
 };
 
 export default assets;

@@ -43,7 +43,7 @@ const OnBoardingScreenTwo = () => {
           </View>
           <Button
             text="Get Started"
-            onPress={() => navigate('OnBoardingScreenTwo')}
+            onPress={() => navigate('SignInScreen')}
             buttonStyles={styles.buttonStyle}
             textStyles={styles.buttonText}
           />{' '}
