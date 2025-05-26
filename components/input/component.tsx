@@ -18,7 +18,7 @@ const InputComponent = ({
         placeholder={placeholder}
         placeholderTextColor={colors.placeholder}
         style={styles.input}
-        secureTextEntry={true}
+        secureTextEntry={secureTextEntry}
         onChangeText={onChangeText}
       />
       {secureTextEntry && <Image source={eye} style={styles.eye} />}
