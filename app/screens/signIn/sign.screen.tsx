@@ -8,7 +8,11 @@ import Button from '../../../components/button/component';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import {scale} from '../../theme/scale';
+import {navigate} from '../../navigators/navigation-utilities';
+import {useSignin} from './signin.hook';
+
 const SignInScreen = () => {
+  const {isSecure, setIsSecure} = useSignin();
   const styles = createStyles();
   const {logoBlack} = assets;
   return (
@@ -28,9 +32,11 @@ const SignInScreen = () => {
           placeholder={'Email/Phone Number'}
         />
         <InputComponent
+          isSecure
+          secureTextEntry={isSecure}
           onChangeText={e => console.log(e)}
           placeholder={'Password'}
-          secureTextEntry={true}
+          onSecurePress={() => setIsSecure(!isSecure)}
         />
       </View>
       <View style={styles.colG2}>
@@ -46,6 +52,7 @@ const SignInScreen = () => {
       <View style={styles.buttonContainer}>
         <Button text="Login" textStyles={styles.buttonText} />
         <Button
+          onPress={() => navigate('SignUpScreen')}
           text="Sign Up"
           textStyles={styles.outlineButtonText}
           buttonStyles={styles.outlineButtonBg}
