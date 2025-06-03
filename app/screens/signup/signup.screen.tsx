@@ -4,8 +4,11 @@ import {createStyles} from './signup.styles';
 import assets from '../../assets';
 import InputComponent from '../../../components/input/component';
 
+import {useSignup} from './signup.hook';
+
 const SignUpScreen = () => {
   const {logoBlack} = assets;
+  const {isSecure, setIsSecure} = useSignup();
   const styles = createStyles();
   return (
     <ScrollView style={styles.container}>
@@ -22,10 +25,13 @@ const SignUpScreen = () => {
           onChangeText={e => console.log(e)}
           placeholder={'Email/Phone Number'}
         />
+
         <InputComponent
+          isSecure
+          secureTextEntry={isSecure}
           onChangeText={e => console.log(e)}
           placeholder={'Password'}
-          secureTextEntry={true}
+          onSecurePress={() => setIsSecure(!isSecure)}
         />
       </View>
     </ScrollView>
