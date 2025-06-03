@@ -5,6 +5,12 @@ import assets from '../../assets';
 import InputComponent from '../../../components/input/component';
 
 import {useSignup} from './signup.hook';
+import Button from '../../../components/button/component';
+import {goBack, navigate} from '../../navigators/navigation-utilities';
+import {renderMarginTop} from '../../utils/ui-utils';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import {scale} from '../../theme/scale';
+import AntDesign from 'react-native-vector-icons/AntDesign';
 
 const SignUpScreen = () => {
   const {logoBlack} = assets;
@@ -23,7 +29,11 @@ const SignUpScreen = () => {
       <View style={styles.inputContainer}>
         <InputComponent
           onChangeText={e => console.log(e)}
-          placeholder={'Email/Phone Number'}
+          placeholder={'Full Name'}
+        />
+        <InputComponent
+          onChangeText={e => console.log(e)}
+          placeholder={'Email Address'}
         />
 
         <InputComponent
@@ -33,6 +43,45 @@ const SignUpScreen = () => {
           placeholder={'Password'}
           onSecurePress={() => setIsSecure(!isSecure)}
         />
+        <InputComponent
+          onChangeText={e => console.log(e)}
+          placeholder={'Country'}
+        />
+      </View>
+      {renderMarginTop(12)}
+      <View style={styles.buttonContainer}>
+        <Button text="Login" textStyles={styles.buttonText} />
+        <Button
+          onPress={() => navigate('SignUpScreen')}
+          text="Sign Up"
+          textStyles={styles.outlineButtonText}
+          buttonStyles={styles.outlineButtonBg}
+        />{' '}
+      </View>
+      <View style={styles.borderContainer}>
+        <View style={styles.orBorder} />
+        <Text style={styles.orText}>Or</Text>
+        <View style={styles.orBorder} />
+      </View>
+      <View style={[styles.buttonContainer, styles.mt14]}>
+        <Button
+          buttonStyles={styles.iconButtonStyle}
+          component={<MaterialIcons name="apple" size={scale(24)} />}
+          text="Apple Pay"
+          textStyles={styles.outlineButtonText}
+        />
+        <Button
+          buttonStyles={styles.iconButtonStyle}
+          component={<AntDesign name="google" size={scale(20)} />}
+          text="Google Pay"
+          textStyles={styles.outlineButtonText}
+        />
+      </View>
+      <View style={styles.accountContainer}>
+        <Text style={styles.dhText}>
+          Already have an account?{'\t'}
+          <Text onPress={goBack}>Login</Text>
+        </Text>
       </View>
     </ScrollView>
   );
