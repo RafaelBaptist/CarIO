@@ -25,6 +25,7 @@ import {createStyle} from './navigation.styles';
 import OnBoardingScreenTwo from '../screens/onboarding/onboardingTwo.screen';
 import SignInScreen from '../screens/signIn/sign.screen';
 import SignUpScreen from '../screens/signup/signup.screen';
+import ResetScreen from '../screens/reset/reset.screen';
 
 type NavigationProps = Partial<
   React.ComponentProps<typeof NavigationContainer>
@@ -124,6 +125,13 @@ const AuthStack = () => {
       <Stack.Screen
         name="SignUpScreen"
         component={SignUpScreen}
+        options={{
+          cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+        }}
+      />
+      <Stack.Screen
+        name="ResetScreen"
+        component={ResetScreen}
         options={{
           cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
         }}

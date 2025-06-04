@@ -52,7 +52,7 @@ const SignUpScreen = () => {
       <View style={styles.buttonContainer}>
         <Button text="Login" textStyles={styles.buttonText} />
         <Button
-          onPress={() => navigate('SignUpScreen')}
+          onPress={() => navigate('ResetScreen')}
           text="Sign Up"
           textStyles={styles.outlineButtonText}
           buttonStyles={styles.outlineButtonBg}

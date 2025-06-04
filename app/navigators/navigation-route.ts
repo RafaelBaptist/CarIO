@@ -3,6 +3,7 @@ export type NavigatorParamList = {
   ['OnBoardingScreenTwo']: undefined;
   ['SignInScreen']: undefined;
   ['SignUpScreen']: undefined;
+  ['ResetScreen']:undefined;
 };
 
 export type ScreenName = keyof NavigatorParamList;
