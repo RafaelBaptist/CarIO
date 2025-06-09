@@ -2,6 +2,7 @@ import {StyleSheet} from 'react-native';
 import {colors} from '../../theme/colors';
 import {scale} from '../../theme/scale';
 import {FontSize} from '../../theme/font-size';
+import { typography } from '../../theme/typography';
 
 export const createStyles = () =>
   StyleSheet.create({
@@ -9,6 +10,12 @@ export const createStyles = () =>
       flex: 1,
       backgroundColor: colors.background,
       paddingHorizontal: scale(18),
+    },
+  
+    main:{
+      flex:0.6,
+      alignItems  :'center',
+      justifyContent:'center',
     },
     carLogo: {
       height: scale(45),
@@ -20,6 +27,12 @@ export const createStyles = () =>
       alignItems: 'center',
       columnGap: scale(12),
       paddingVertical: scale(12),
+    },
+    infoText:{
+      color:colors.placeholder,
+      fontFamily:typography.regular,
+      textAlign:'center',
+
     },
     textLogo: {
       fontSize: FontSize.FONT_24Px,
@@ -55,6 +68,9 @@ export const createStyles = () =>
     },
     inputContainer: {
       rowGap: scale(6),
+      flex:1,
+      width:'100%',
+      
     },
     outlineButtonBg: {
       backgroundColor: colors.outlineButtonBg,
@@ -112,4 +128,5 @@ export const createStyles = () =>
       color: colors.placeholder,
       fontWeight: '400',
     },
+
   });
