@@ -2,10 +2,10 @@ import {View, ScrollView, Image, Text} from 'react-native';
 import React from 'react';
 import {createStyles} from './reset.styles';
 import assets from '../../assets';
-import {renderMarginTop} from '../../utils/ui-utils';
+import {renderMarginBottom, renderMarginTop} from '../../utils/ui-utils';
 import InputComponent from '../../../components/input/component';
 import Button from '../../../components/button/component';
-import {navigate} from '../../navigators/navigation-utilities';
+import {goBack, navigate} from '../../navigators/navigation-utilities';
 
 const ResetScreen = () => {
   const styles = createStyles();
@@ -36,13 +36,26 @@ const ResetScreen = () => {
           />
         </View>
         {renderMarginTop(28)}
+
         <Button
-          onPress={() => navigate('ResetScreen')}
+          onPress={() => navigate('VerifyScreen')}
           text="Continue"
           textStyles={styles.outlineButtonText}
           buttonStyles={styles.outlineButtonBg}
-        />{' '}
+        />
+        {renderMarginTop(28)}
+        <Text
+          onPress={() => navigate('SignInScreen')}
+          style={[styles.dHText, styles.textCenter]}>
+          Return to sign in
+        </Text>
       </View>
+      <View style={styles.footerText}>
+        <Text onPress={goBack} style={[styles.dHText, styles.textCenter]}>
+          Create a New Account{' '}
+        </Text>
+      </View>{' '}
+      {renderMarginBottom(32)}{' '}
     </View>
   );
 };

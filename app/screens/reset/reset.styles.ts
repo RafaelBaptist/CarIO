@@ -55,6 +55,16 @@ export const createStyles = () =>
       color: colors.placeholder,
       fontWeight: '500',
     },
+    dHText: {
+      color: colors.placeholder,
+      fontFamily: typography.regular,
+    },
+    footerText:{
+      flex:0.4,
+    
+      justifyContent:'flex-end'
+
+    },
     colG2: {
       columnGap: scale(2),
       justifyContent: 'space-between',
@@ -68,17 +78,18 @@ export const createStyles = () =>
     },
     inputContainer: {
       rowGap: scale(6),
-      flex:1,
+   
       width:'100%',
       
     },
     outlineButtonBg: {
-      backgroundColor: colors.outlineButtonBg,
+      
       borderWidth: 1,
       borderColor: colors.button,
+      width:'100%'
     },
     outlineButtonText: {
-      color: colors.black,
+      color: colors.white,
       fontWeight: '600',
     },
     buttonText: {
