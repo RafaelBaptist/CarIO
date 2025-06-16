@@ -2,6 +2,7 @@ import {View, Text, Pressable, FlatList} from 'react-native';
 import React from 'react';
 import {BottomSheet} from '../bottomSheet/BottomSheet';
 import {createStyles} from './countrypicker.styles';
+import {ICountryProps} from './ICountrypicker.props';
 
 const countries = [
   {code: 'IN', name: 'India', flag: '🇮🇳', ph: '+91'},
@@ -10,7 +11,7 @@ const countries = [
   {code: 'FR', name: 'France', flag: '🇫🇷', ph: '+33'},
   {code: 'BR', name: 'Brazil', flag: '🇧🇷', ph: '+55'},
 ];
-const CountryComponent = () => {
+const CountryComponent = ({onPress}: ICountryProps) => {
   const [isVisible, setIsVisible] = React.useState(false);
   const [selectedCountry, setSelectedCountry] = React.useState(countries[4]);
   const styles = createStyles();
@@ -36,6 +37,7 @@ const CountryComponent = () => {
                 onPress={() => {
                   setSelectedCountry(item);
                   setIsVisible(false);
+                  onPress(item);
                 }}
                 style={styles.itemContainer}>
                 <Text style={styles.text}>
