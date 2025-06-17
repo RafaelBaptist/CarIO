@@ -2,7 +2,7 @@ import {StyleSheet} from 'react-native';
 import {colors} from '../../theme/colors';
 import {scale} from '../../theme/scale';
 import {FontSize} from '../../theme/font-size';
-import { typography } from '../../theme/typography';
+import {typography} from '../../theme/typography';
 
 export const createStyles = () =>
   StyleSheet.create({
@@ -10,12 +10,14 @@ export const createStyles = () =>
       flex: 1,
       backgroundColor: colors.background,
       paddingHorizontal: scale(18),
+      paddingTop: scale(28),
     },
-  
-    main:{
-      flex:0.6,
-      alignItems  :'center',
-      justifyContent:'center',
+    main: {
+      flex: 0.8,
+      justifyContent: 'center',
+    },
+    flex: {
+      flex: 1,
     },
     carLogo: {
       height: scale(45),
@@ -28,24 +30,25 @@ export const createStyles = () =>
       columnGap: scale(12),
       paddingVertical: scale(12),
     },
-    infoText:{
-      color:colors.placeholder,
-      fontFamily:typography.regular,
-      textAlign:'center',
-
-    },
-    textLogo: {
+    titleStyle: {
       fontSize: FontSize.FONT_24Px,
       color: colors.black,
+      flex: 1,
+      fontFamily: typography.bold,
     },
     textContainer: {
       paddingTop: scale(38),
       marginBottom: scale(12),
     },
+    infoText: {
+      color: colors.placeholder,
+      fontFamily: typography.regular,
+      textAlign: 'center',
+    },
     textStyle: {
-      fontSize: FontSize.FONT_30Px,
       color: colors.black,
-      fontWeight: '800',
+      fontSize: FontSize.FONT_26Px,
+      fontFamily: typography.semiBold,
     },
     textCenter: {
       textAlign: 'center',
@@ -53,47 +56,42 @@ export const createStyles = () =>
     textRemember: {
       fontSize: FontSize.FONT_12Px,
       color: colors.placeholder,
-      fontWeight: '500',
-    },
-    dHText: {
-      color: colors.placeholder,
       fontFamily: typography.regular,
     },
-    footerText:{
-      flex:0.4,
-    
-      justifyContent:'flex-end'
-
+    inputContainer: {
+      rowGap: scale(6),
     },
     colG2: {
       columnGap: scale(2),
       justifyContent: 'space-between',
       flexDirection: 'row',
       alignItems: 'center',
+      marginTop: scale(16),
     },
     forgotContainer: {
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'space-between',
+      backgroundColor: 'red',
     },
-    inputContainer: {
-      rowGap: scale(6),
-   
-      width:'100%',
-      
-    },
-    outlineButtonBg: {
-      
+    outlineButton: {
+      backgroundColor: colors.outlineButtonBg,
       borderWidth: 1,
       borderColor: colors.button,
-      width:'100%'
+    },
+    outlineButtonSignUpText: {
+      color: colors.black,
+      fontFamily: typography.bold,
+      fontSize: FontSize.FONT_18Px,
     },
     outlineButtonText: {
-      color: colors.white,
-      fontWeight: '600',
+      color: colors.black,
+      fontFamily: typography.bold,
+      fontSize: FontSize.FONT_14Px,
     },
     buttonText: {
-      fontWeight: '600',
+      fontFamily: typography.bold,
+      fontSize: FontSize.FONT_18Px,
     },
     buttonContainer: {
       rowGap: scale(14),
@@ -109,13 +107,16 @@ export const createStyles = () =>
     orText: {
       fontSize: FontSize.FONT_12Px,
       width: scale(15),
+      fontFamily: typography.regular,
       color: colors.placeholder,
     },
     orBorder: {
       height: 1,
       flex: 1,
-      backgroundColor: colors.border,
+      backgroundColor: colors.divider,
+      marginVertical: scale(18),
     },
+    
     buttonStyle: {
       flexDirection: 'row',
       columnGap: scale(12),
@@ -123,21 +124,22 @@ export const createStyles = () =>
     iconButtonStyle: {
       backgroundColor: colors.outlineButtonBg,
       borderWidth: 1,
-      borderColor: colors.button,
+      borderColor: colors.btnBorder,
       flexDirection: 'row',
+      alignItems: 'center',
       columnGap: scale(8),
+      paddingVertical: scale(10),
     },
     mt14: {
       marginTop: scale(14),
     },
-    accountContainer: {
-      marginVertical: scale(4),
-
+    haveAccountContainer: {
       alignItems: 'center',
+      marginTop: scale(28),
+      paddingBottom: scale(28),
     },
-    dhText: {
+    dontHaveText: {
       color: colors.placeholder,
-      fontWeight: '400',
+      fontFamily: typography.regular,
     },
-
   });
