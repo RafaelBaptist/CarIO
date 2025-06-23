@@ -24,18 +24,14 @@ const OtpScreen = () => {
             <Text style={[styles.textStyle, styles.textCenter]}>
               Enter verification code
             </Text>
-            {renderMarginTop(12)}
+            {renderMarginTop(28)}
             <Text style={styles.infoText}>
               We have send a Code to: +100*****0
             </Text>
+            {renderMarginTop(12)}
           </View>
           <View style={styles.inputContainer}>
             <OtpComponent />
-            <InputComponent
-              keyboardType="numeric"
-              onChangeText={e => console.log(e)}
-              placeholder={'Phone Number'}
-            />
           </View>
           {renderMarginTop(28)}
           <Button

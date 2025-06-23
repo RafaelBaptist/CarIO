@@ -60,6 +60,7 @@ export const createStyles = () =>
     },
     inputContainer: {
       rowGap: scale(6),
+      paddingTop:scale(12)
     },
     colG2: {
       columnGap: scale(2),

@@ -17,4 +17,5 @@ export const colors = {
   checkBoxBg:'#454545',
   textForgot:'#454545',
   outlineButtonBg:'#ededed',
+  btnBorder:'#d7d7d7',
 };

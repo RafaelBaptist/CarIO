@@ -11,6 +11,20 @@ export const createStyles= ()=>StyleSheet.create({
       
     
     },
-    
+    input:{
+      width:scale(55),
+      height:scale(55),
+      backgroundColor:colors.white,
+      borderWidth:1,
+      borderColor:colors.btnBorder,
+      textAlign:'center',
+      fontSize:FontSize.FONT_20Px,
+      borderRadius:scale(4),
+      marginHorizontal:scale(4),
+      fontFamily:typography.regular,
+
+
+
+    },
   
      } );
